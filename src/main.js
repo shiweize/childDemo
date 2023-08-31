@@ -10,8 +10,6 @@ import {
 let router = null
 let instance = null
 let history = null
-console.log(111111,'---print---');
-instance = createApp(App)
 
 // declare global {
 //   interface Window {
@@ -29,7 +27,7 @@ function render(props = {}) {
     history,
     routes
   })
-
+  instance = createApp(App)
   instance.use(router)
   //   instance.use(store);
   instance.mount(
@@ -55,7 +53,7 @@ renderWithQiankun({
     instance._container.innerHTML = ''
     history.destroy() // 不卸载  router 会导致其他应用路由失败
     router = null
-    // instance = null
+    instance = null
   }
 })
 

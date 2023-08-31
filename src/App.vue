@@ -3,7 +3,7 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <div style="height:200px;margin-top:200px">
+  <div>
     <router-view  v-slot="{ Component }">
     <component :is="Component" :key="$route.name"/>
   </router-view>
